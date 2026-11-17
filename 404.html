@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Page not found | Alberto Clocks</title>
+<link rel="icon" href="/albert/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Your original palette */
+    --wine: #27060b;
+    --wine2: #650f1d;
+    --ruby: #9e2438;
+    --gold: #d8b66a;
+    --cream: #f8f4eb;
+    --bg-white: #ffffff;
+    --card-bg: #f9f9fb;
+    --accent-gold: #b8860b;
+    --rolex-green: #006039;
+    --omega-red: #c41230;
+    --text-dark: #1a1a1a;
+    --text-muted: #555555;
+    --border-color: rgba(184, 134, 11, 0.25);
+    /* Midnight navy theme added for a calm, professional look */
+    --navy: #0a1424;
+    --navy2: #152a48;
+    --navy-face: #0d1b30;
+    --soft: #d3dae6;
+    --muted: #94a3bb;
+    --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    --sans: "Manrope", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{min-height:100vh;display:flex;flex-direction:column;font-family:var(--sans);color:var(--cream);line-height:1.6;
+       background:radial-gradient(circle at 78% 38%,var(--navy2) 0,var(--navy) 64%)}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+  header{padding:18px 6vw}
+  .brand{display:inline-flex;align-items:center;gap:12px;font-family:var(--serif);font-size:1.5rem;font-weight:600}
+  .brand img{width:42px;height:42px;object-fit:contain;border-radius:50%}
+
+  main{flex:1;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:48px;max-width:1080px;width:100%;margin:0 auto;padding:24px 6vw 56px}
+  .code{font-family:var(--serif);font-weight:600;font-size:clamp(5rem,16vw,9.5rem);line-height:.9;color:var(--gold)}
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;margin:10px 0 14px}
+  .msg{max-width:46ch;color:var(--soft)}
+  .path{margin-top:14px;font-size:.85rem;color:var(--muted);word-break:break-all}
+  .path code{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--cream)}
+
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 30px}
+  .btn{font:600 .95rem var(--sans);padding:13px 26px;border-radius:999px;border:1.5px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
+  .btn-main{background:var(--gold);color:var(--navy)}
+  .btn-main:hover{background:var(--cream)}
+  .btn-ghost{background:transparent;color:var(--gold)}
+  .btn-ghost:hover{background:var(--gold);color:var(--navy)}
+
+  .links p{font-size:.85rem;color:var(--muted);margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px}
+  .chips a{padding:7px 16px;border:1px solid rgba(216,182,106,.3);border-radius:999px;font-size:.9rem;background:rgba(248,244,235,.04);transition:border-color .2s,background .2s}
+  .chips a:hover{border-color:var(--gold);background:rgba(216,182,106,.14)}
+
+  /* Live watch */
+  .watch{text-align:center}
+  .dial{width:100%;max-width:340px;filter:drop-shadow(0 18px 40px rgba(0,0,0,.5))}
+  .digital{margin-top:18px;font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--cream);letter-spacing:.04em;line-height:1.1}
+  .date{font-size:.88rem;color:var(--muted);margin-top:4px}
+
+  footer{padding:20px 6vw;text-align:center;font-size:.85rem;color:var(--muted);border-top:1px solid rgba(216,182,106,.2)}
+
+  @media (max-width:820px){
+    main{grid-template-columns:1fr;gap:28px;text-align:center}
+    .msg{margin:0 auto}.actions,.chips{justify-content:center}
+    .watch{order:-1}.dial{max-width:240px}
+  }
+  @media (prefers-reduced-motion:reduce){.btn,.chips a{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <a class="brand" href="/albert/index.html" data-p="index.html"><img src="/albert/logo.png" data-p="logo.png" alt="Alberto Clocks logo">Alberto Clocks</a>
+</header>
+
+<main>
+  <section>
+    <p class="code">404</p>
+    <h1>This page has run out of time.</h1>
+    <p class="msg">The link may be broken, or the page may have moved. Go back to where you were, or choose a place to continue.</p>
+    <p class="path">Address not found: <code id="path"></code></p>
+
+    <div class="actions">
+      <button type="button" class="btn btn-main" id="back">Go back</button>
+      <a class="btn btn-ghost" href="/albert/index.html" data-p="index.html">Home page</a>
+    </div>
+
+    <nav class="links" aria-label="Popular pages">
+      <p>Popular places</p>
+      <div class="chips">
+        <a href="/albert/collections.html" data-p="collections.html">All collections</a>
+        <a href="/albert/collections.html#watch-rolex1" data-p="collections.html#watch-rolex1">Rolex</a>
+        <a href="/albert/collections.html#watch-omega1" data-p="collections.html#watch-omega1">Omega</a>
+        <a href="/albert/collections.html#watch-casio1" data-p="collections.html#watch-casio1">Casio</a>
+        <a href="/albert/collections.html#watch-gshock1" data-p="collections.html#watch-gshock1">G-Shock</a>
+        <a href="/albert/final%20price%20list.pdf" data-p="final%20price%20list.pdf">Price list</a>
+        <a href="/albert/sitemap.html" data-p="sitemap.html">Sitemap</a>
+      </div>
+    </nav>
+  </section>
+
+  <div class="watch">
+    <svg class="dial" id="dial" viewBox="0 0 200 200" role="img" aria-label="Analog watch showing the current time">
+      <circle cx="100" cy="100" r="96" fill="#050b15" stroke="#d8b66a" stroke-width="3"/>
+      <circle cx="100" cy="100" r="88" fill="#0d1b30" stroke="#b8860b" stroke-width="1" stroke-opacity=".6"/>
+      <g stroke="#d8b66a" stroke-linecap="round">
+        <path stroke-width="3" d="M100 14v12M100 174v12M14 100h12M174 100h12"/>
+        <path stroke-width="1.5" d="M143 25.6l-6 10.4M174.4 57l-10.4 6M174.4 143l-10.4-6M143 174.4l-6-10.4M57 174.4l6-10.4M25.6 143l10.4-6M25.6 57l10.4 6M57 25.6l6 10.4"/>
+      </g>
+      <text x="100" y="78" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="13" fill="#d8b66a" letter-spacing="2">ALBERTO</text>
+      <text x="100" y="146" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-size="10" fill="#f8f4eb" fill-opacity=".65" letter-spacing="2">NOT FOUND</text>
+      <line id="hh" x1="100" y1="100" x2="100" y2="58" stroke="#f8f4eb" stroke-width="5" stroke-linecap="round"/>
+      <line id="mh" x1="100" y1="100" x2="100" y2="30" stroke="#f8f4eb" stroke-width="3" stroke-linecap="round"/>
+      <line id="sh" x1="100" y1="114" x2="100" y2="22" stroke="#e0475e" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="5" fill="#d8b66a"/>
+    </svg>
+    <p class="digital" id="digital" aria-live="off">--:--:--</p>
+    <p class="date" id="date"></p>
+  </div>
+</main>
+
+<footer>&copy; 2026 Alberto Clocks. All rights reserved.</footer>
+
+<script>
+  // Finds the site folder by itself (for example /albert/), so links work even if the repo is renamed; also works when opened from the computer
+  var repo = location.pathname.split('/')[1];
+  var base = /github\.io$/.test(location.hostname) && repo ? '/' + repo + '/' : (location.protocol === 'file:' ? '' : '/');
+  document.querySelectorAll('[data-p]').forEach(function (el) {
+    el.setAttribute(el.tagName === 'IMG' ? 'src' : 'href', base + el.getAttribute('data-p'));
+  });
+
+  // Show the address that was not found
+  document.getElementById('path').textContent = location.pathname + location.search;
+
+  // Go back to the page the visitor came from; if there is none, open the home page
+  document.getElementById('back').addEventListener('click', function () {
+    if (window.history.length > 1) {
+      window.history.back();
+    } else if (document.referrer) {
+      window.location.href = document.referrer;
+    } else {
+      window.location.href = base + 'index.html';
+    }
+  });
+
+  // Live clock: the watch shows the visitor's current local time
+  var hh = document.getElementById('hh'), mh = document.getElementById('mh'), sh = document.getElementById('sh');
+  var digital = document.getElementById('digital'), dateEl = document.getElementById('date');
+
+  function rot(el, deg) { el.setAttribute('transform', 'rotate(' + deg + ' 100 100)'); }
+
+  function updateClock() {
+    var d = new Date(), h = d.getHours(), m = d.getMinutes(), s = d.getSeconds();
+    rot(hh, (h % 12) * 30 + m * 0.5);
+    rot(mh, m * 6 + s * 0.1);
+    rot(sh, s * 6);
+    digital.textContent = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    dateEl.textContent = d.toLocaleDateString([], { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
+  function tick() { updateClock(); setTimeout(tick, 1000 - (Date.now() % 1000)); }
+  tick();
+</script>
+</body>
+</html>
